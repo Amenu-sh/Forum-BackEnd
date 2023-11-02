@@ -1,4 +1,6 @@
 const mysql = require("mysql2");
+require("dotenv").config();
+
 // const pool = mysql.createPool({
 //   socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
 //   host: process.env.DB_HOST,
@@ -8,7 +10,7 @@ const mysql = require("mysql2");
 //   connectionLimit: 10,
 // });
 
-const pool = mysql.createConnection(process.env.DATABASE_URL);
+const pool = mysql.createConnection(process.env.DATABASE_URL); //for deplyment
 
 // pool.getConnection(function (err, connection) {
 //   console.log("Database connected!");
