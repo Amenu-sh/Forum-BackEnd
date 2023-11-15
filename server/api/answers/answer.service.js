@@ -4,7 +4,7 @@ module.exports = {
   addAnswer: (data, callback) => {
     pool.query(
       `INSERT INTO answer(answer, question_id, user_id)VALUES(?, ?, ?)`,
-      [data.answer, data.questionId, data.userId],
+      [data.answer, data.questionId, data.user_id],
       (err, result) => {
         if (err) return callback(err);
         return callback(null, result);
